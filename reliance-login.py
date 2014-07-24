@@ -18,8 +18,8 @@
  
 import urllib2, urllib, cookielib, time, re, sys
 
-username = 'username' 
-password = 'password'
+username = '343331695693' 
+password = '12345678'
 
 '''You don't normally have to edit anything below this line'''
 debug = False
