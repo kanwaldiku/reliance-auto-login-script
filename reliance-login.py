@@ -60,17 +60,17 @@ def is_internet_on():
 
 def internet_connect():
   '''try to connect to the internet'''
-  code, headers, html, cur_opener = get_url("http://10.239.89.15/reliance/startportal_isg.do", timeout=10)
+  code, headers, html, cur_opener = get_url("http://220.224.142.229/reliance/startportal_isg.do", timeout=10)
   if debug: print html
   login_data = urllib.urlencode({'userId' : 343331695693 , 'password' : 12345678 , 'action' : 'doLoginSubmit'})
-  code, headers, html, cur_opener = get_url('http://10.239.89.15/reliance/login.do', data=login_data, opener=cur_opener)
+  code, headers, html, cur_opener = get_url('http://220.224.142.229/reliance/login.do', data=login_data, opener=cur_opener)
   if debug: print html
 
 def internet_disconnect():
   '''try to disconnect from the internet'''
-  code, headers, html, cur_opener = get_url('http://10.239.89.15/reliance/login.do', timeout=10)
+  code, headers, html, cur_opener = get_url('http://220.224.142.229/reliance/login.do', timeout=10)
   if debug: print html
-  code, headers, html, cur_opener = get_url('http://10.239.89.15/reliance/logout.do', opener=cur_opener)
+  code, headers, html, cur_opener = get_url('http://220.224.142.229/reliance/logout.do', opener=cur_opener)
   if debug: print html
 
 def internet_keep_alive():
